@@ -110,6 +110,7 @@ public class WifiTetherSettingsTest {
     }
 
     @Test
+<<<<<<< HEAD
     @Config(shadows = ShadowRestrictedDashboardFragment.class)
     public void onCreate_canNotShowWifiHotspot_shouldFinish() {
         setCanShowWifiHotspotCached(false);
@@ -118,6 +119,44 @@ public class WifiTetherSettingsTest {
         mWifiTetherSettings.onCreate(null);
 
         verify(mWifiTetherSettings).finish();
+=======
+    @Ignore
+    public void wifiTetherNonIndexableKeys_tetherAvailable_keysNotReturned() {
+        FeatureFlagUtils.setEnabled(mContext, FeatureFlags.TETHER_ALL_IN_ONE, false);
+        // To let TetherUtil.isTetherAvailable return true, select one of the combinations
+        setupIsTetherAvailable(true);
+
+        final List<String> niks =
+                WifiTetherSettings.SEARCH_INDEX_DATA_PROVIDER.getNonIndexableKeys(mContext);
+
+        assertThat(niks).doesNotContain(WifiTetherSettings.KEY_WIFI_TETHER_NETWORK_NAME);
+        assertThat(niks).doesNotContain(WifiTetherSettings.KEY_WIFI_TETHER_NETWORK_PASSWORD);
+        assertThat(niks).doesNotContain(WifiTetherSettings.KEY_WIFI_TETHER_AUTO_OFF);
+        assertThat(niks).doesNotContain(WifiTetherSettings.KEY_WIFI_TETHER_NETWORK_AP_BAND);
+        assertThat(niks).doesNotContain(WifiTetherSettings.KEY_WIFI_TETHER_HIDDEN_SSID);
+    }
+
+    @Test
+    public void wifiTetherNonIndexableKeys_tetherNotAvailable_keysReturned() {
+        // To let TetherUtil.isTetherAvailable return false, select one of the combinations
+        setupIsTetherAvailable(false);
+
+        final List<String> niks =
+                WifiTetherSettings.SEARCH_INDEX_DATA_PROVIDER.getNonIndexableKeys(mContext);
+
+        assertThat(niks).contains(WifiTetherSettings.KEY_WIFI_TETHER_NETWORK_NAME);
+        assertThat(niks).contains(WifiTetherSettings.KEY_WIFI_TETHER_NETWORK_PASSWORD);
+        assertThat(niks).contains(WifiTetherSettings.KEY_WIFI_TETHER_AUTO_OFF);
+        assertThat(niks).contains(WifiTetherSettings.KEY_WIFI_TETHER_NETWORK_AP_BAND);
+        assertThat(niks).contains(WifiTetherSettings.KEY_WIFI_TETHER_HIDDEN_SSID);
+    }
+
+    @Test
+    public void createPreferenceControllers_notEmpty() {
+        assertThat(WifiTetherSettings.SEARCH_INDEX_DATA_PROVIDER.getPreferenceControllers(mContext))
+                .isNotEmpty();
+>>>>>>> 011f6f815b (SoftAp: add Hidden SSID preference)
+>>>>>>> f76393f6eb6ba6c0e636e2c87619d8b8ede848ac
     }
 
     @Test
@@ -186,7 +225,7 @@ public class WifiTetherSettingsTest {
         assertThat(keys).contains(WifiTetherSettings.KEY_WIFI_TETHER_SECURITY);
         assertThat(keys).contains(WifiTetherSettings.KEY_WIFI_TETHER_NETWORK_PASSWORD);
         assertThat(keys).contains(WifiTetherSettings.KEY_WIFI_TETHER_AUTO_OFF);
-        assertThat(keys).contains(WifiTetherSettings.KEY_WIFI_TETHER_MAXIMIZE_COMPATIBILITY);
+        assertThat(keys).contains(WifiTetherSettings.KEY_WIFI_TETHER_AP_BAND);
     }
 
     @Test
@@ -219,6 +258,7 @@ public class WifiTetherSettingsTest {
         assertThat(keys).contains(WifiTetherSettings.KEY_WIFI_TETHER_NETWORK_PASSWORD);
         assertThat(keys).contains(WifiTetherSettings.KEY_WIFI_TETHER_AUTO_OFF);
         assertThat(keys).contains(WifiTetherSettings.KEY_WIFI_TETHER_AP_BAND);
+<<<<<<< HEAD
     }
 
     @Test
@@ -235,6 +275,8 @@ public class WifiTetherSettingsTest {
 
         assertThat(WifiTetherSettings.SEARCH_INDEX_DATA_PROVIDER.isPageSearchEnabled(mContext))
                 .isFalse();
+=======
+>>>>>>> f76393f6eb6ba6c0e636e2c87619d8b8ede848ac
     }
 
     private void spyWifiTetherSettings() {

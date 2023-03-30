@@ -56,6 +56,8 @@ import com.google.android.setupdesign.span.LinkSpan;
 
 import com.android.settings.custom.biometrics.FaceUtils;
 
+import com.android.settings.custom.biometrics.FaceUtils;
+
 /**
  * Provides introductory info about face unlock and prompts the user to agree before starting face
  * enrollment.

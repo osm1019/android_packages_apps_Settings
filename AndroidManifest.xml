@@ -119,7 +119,10 @@
     <uses-permission android:name="android.permission.READ_SAFETY_CENTER_STATUS" />
     <uses-permission android:name="android.permission.SEND_SAFETY_CENTER_UPDATE" />
     <uses-permission android:name="android.permission.START_VIEW_APP_FEATURES" />
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.CUSTOMIZE_SYSTEM_UI" />
+=======
+>>>>>>> f76393f6eb6ba6c0e636e2c87619d8b8ede848ac
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <protected-broadcast android:name="com.android.systemui.doze.pulse" />
@@ -4638,8 +4641,11 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f76393f6eb6ba6c0e636e2c87619d8b8ede848ac
         <!-- Provide direct entry into Dev settings - Running Services -->
         <activity android:name="Settings$DevRunningServicesActivity"
                 android:label="@string/runningservices_settings_title"
@@ -4689,7 +4695,10 @@
                                 
         <!-- This is the longest AndroidManifest.xml ever. -->
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f76393f6eb6ba6c0e636e2c87619d8b8ede848ac
         <activity android:name=".Settings$SmartPixelsActivity"
             android:label="@string/smart_pixels_title"
             android:taskAffinity="com.android.settings"

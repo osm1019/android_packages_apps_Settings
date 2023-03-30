@@ -69,6 +69,7 @@ public class SubscriptionUtilTest {
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         mContext = spy(ApplicationProvider.getApplicationContext());
+        when(mContext.getResources()).thenReturn(mResources);
         when(mContext.getSystemService(SubscriptionManager.class)).thenReturn(mSubMgr);
         when(mContext.getSystemService(TelephonyManager.class)).thenReturn(mTelMgr);
         when(mTelMgr.getUiccSlotsInfo()).thenReturn(null);
@@ -451,18 +452,26 @@ public class SubscriptionUtilTest {
 
     @Test
     public void isSimHardwareVisible_configAsInvisible_returnFalse() {
+<<<<<<< HEAD
         when(mContext.getResources()).thenReturn(mResources);
         when(mResources.getBoolean(R.bool.config_show_sim_info))
                 .thenReturn(false);
+=======
+        when(mResources.getBoolean(R.bool.config_show_sim_info)).thenReturn(false);
+>>>>>>> f76393f6eb6ba6c0e636e2c87619d8b8ede848ac
 
         assertThat(SubscriptionUtil.isSimHardwareVisible(mContext)).isFalse();
     }
 
     @Test
     public void isSimHardwareVisible_configAsVisible_returnTrue() {
+<<<<<<< HEAD
         when(mContext.getResources()).thenReturn(mResources);
         when(mResources.getBoolean(R.bool.config_show_sim_info))
                 .thenReturn(true);
+=======
+        when(mResources.getBoolean(R.bool.config_show_sim_info)).thenReturn(true);
+>>>>>>> f76393f6eb6ba6c0e636e2c87619d8b8ede848ac
 
         assertTrue(SubscriptionUtil.isSimHardwareVisible(mContext));
     }

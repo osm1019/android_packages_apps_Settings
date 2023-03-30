@@ -75,6 +75,14 @@ public class PowerUsageSummary extends PowerUsageBase implements
     private static final String KEY_CURRENT_BATTERY_CAPACITY = "current_battery_capacity";
     private static final String KEY_DESIGNED_BATTERY_CAPACITY = "designed_battery_capacity";
     private static final String KEY_BATTERY_CHARGE_CYCLES = "battery_charge_cycles";
+<<<<<<< HEAD
+=======
+
+    @VisibleForTesting
+    static final int BATTERY_INFO_LOADER = 1;
+    @VisibleForTesting
+    static final int BATTERY_TIP_LOADER = 2;
+>>>>>>> f76393f6eb6ba6c0e636e2c87619d8b8ede848ac
 
     @VisibleForTesting
     PowerGaugePreference mBatteryTempPref;
