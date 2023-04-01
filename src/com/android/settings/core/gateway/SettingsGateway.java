@@ -40,6 +40,7 @@ import com.android.settings.accounts.ManagedProfileSettings;
 import com.android.settings.applications.AppDashboardFragment;
 import com.android.settings.applications.ProcessStatsSummary;
 import com.android.settings.applications.ProcessStatsUi;
+import com.android.settings.applications.RunningServices;
 import com.android.settings.applications.UsageAccessDetails;
 import com.android.settings.applications.appinfo.AlarmsAndRemindersDetails;
 import com.android.settings.applications.appinfo.AppInfoDashboardFragment;
@@ -352,6 +353,10 @@ public class SettingsGateway {
             TurnScreenOnSettings.class.getName(),
             TurnScreenOnDetails.class.getName(),
             crDroidSettingsLayout.class.getName(),
+<<<<<<< HEAD
+=======
+            RunningServices.class.getName(),
+>>>>>>> f76393f6eb6ba6c0e636e2c87619d8b8ede848ac
             SmartPixels.class.getName(),
             WifiTetherClientManager.class.getName()
     };
@@ -397,6 +402,10 @@ public class SettingsGateway {
             Settings.ModuleLicensesActivity.class.getName(),
             UserBackupSettingsActivity.class.getName(),
             Settings.crDroidSettingsLayoutActivity.class.getName(),
+<<<<<<< HEAD
+=======
+            Settings.DevRunningServicesActivity.class.getName(),
+>>>>>>> f76393f6eb6ba6c0e636e2c87619d8b8ede848ac
             Settings.SmartPixelsActivity.class.getName(),
     };
 }

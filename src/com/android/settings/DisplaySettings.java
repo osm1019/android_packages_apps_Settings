@@ -24,6 +24,10 @@ import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.display.BrightnessLevelPreferenceController;
 import com.android.settings.display.CameraGesturePreferenceController;
 import com.android.settings.display.LiftToWakePreferenceController;
+<<<<<<< HEAD
+=======
+import com.android.settings.display.ScreenSaverPreferenceController;
+>>>>>>> f76393f6eb6ba6c0e636e2c87619d8b8ede848ac
 import com.android.settings.display.ShowOperatorNamePreferenceController;
 import com.android.settings.display.TapToWakePreferenceController;
 import com.android.settings.display.ThemePreferenceController;

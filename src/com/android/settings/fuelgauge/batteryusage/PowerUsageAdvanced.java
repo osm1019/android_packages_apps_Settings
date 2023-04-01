@@ -64,6 +64,9 @@ public class PowerUsageAdvanced extends PowerUsageBase {
     static final int MENU_STATS_RESET = Menu.FIRST + 1;
     private boolean mStatsReset = false;
 
+    static final int MENU_STATS_RESET = Menu.FIRST + 1;
+    private boolean mStatsReset = false;
+
     @VisibleForTesting
     BatteryHistoryPreference mHistPref;
     @VisibleForTesting

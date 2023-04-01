@@ -29,7 +29,13 @@ import androidx.annotation.VisibleForTesting;
 import com.android.settings.display.AlwaysOnDisplaySlice;
 import com.android.settings.display.ScreenTimeoutPreferenceController;
 import com.android.settings.flashlight.FlashlightSlice;
+<<<<<<< HEAD
 import com.android.settings.homepage.contextualcards.deviceinfo.DataUsageSlice;
+=======
+import com.android.settings.fuelgauge.batterytip.BatteryTipPreferenceController;
+import com.android.settings.homepage.contextualcards.deviceinfo.DataUsageSlice;
+import com.android.settings.homepage.contextualcards.slices.BatteryFixSlice;
+>>>>>>> f76393f6eb6ba6c0e636e2c87619d8b8ede848ac
 import com.android.settings.homepage.contextualcards.slices.BluetoothDevicesSlice;
 import com.android.settings.homepage.contextualcards.slices.ContextualAdaptiveSleepSlice;
 import com.android.settings.homepage.contextualcards.slices.DarkThemeSlice;
