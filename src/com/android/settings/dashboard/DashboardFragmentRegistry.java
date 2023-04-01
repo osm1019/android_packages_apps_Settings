@@ -128,11 +128,8 @@ public class DashboardFragmentRegistry {
                 CategoryKey.CATEGORY_BATTERY_SAVER_SETTINGS);
         PARENT_TO_CATEGORY_KEY_MAP.put(SmartBatterySettings.class.getName(),
                 CategoryKey.CATEGORY_SMART_BATTERY_SETTINGS);
-<<<<<<< HEAD
         PARENT_TO_CATEGORY_KEY_MAP.put(CommunalDashboardFragment.class.getName(),
                 CategoryKey.CATEGORY_COMMUNAL_SETTINGS);
-=======
->>>>>>> f76393f6eb6ba6c0e636e2c87619d8b8ede848ac
         PARENT_TO_CATEGORY_KEY_MAP.put(crDroidSettingsLayout.class.getName(),
                 CategoryKey.CATEGORY_CRDROID);
 

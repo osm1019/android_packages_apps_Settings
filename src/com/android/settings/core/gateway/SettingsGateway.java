@@ -353,10 +353,7 @@ public class SettingsGateway {
             TurnScreenOnSettings.class.getName(),
             TurnScreenOnDetails.class.getName(),
             crDroidSettingsLayout.class.getName(),
-<<<<<<< HEAD
-=======
             RunningServices.class.getName(),
->>>>>>> f76393f6eb6ba6c0e636e2c87619d8b8ede848ac
             SmartPixels.class.getName(),
             WifiTetherClientManager.class.getName()
     };
